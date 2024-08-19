@@ -52,7 +52,6 @@ We can check the quality of the ISDU-QSMNet output by running the **`metrics_eva
 
 
 
-README.md
 <h2>Dependencies</h2>
 <li> Python  </li>  
 <li> PyTorch 2.10 </li>
