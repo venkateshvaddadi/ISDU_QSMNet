@@ -36,19 +36,22 @@ We can check the quality of the ISDU-QSMNet output by running the **`metrics_eva
 **`savedModels:`** 
 <h2>Files Description</h2>
 
-MoDL_QSM_SW_test.py
 
-MoDL_QSM_SW_train.py
 
-MoDL_QSM_USW_RS_ISDU_QSM_test.py.py
 
-MoDL_QSM_USW_RS_ISDU_QSM_test_on_QSM_2016_challange_data_RC_1.py
 
-MoDL_QSM_USW_RS_ISDU_QSM_train.py
 
-MoDL_QSM_USW_test.py
 
-MoDL_QSM_USW_train.py
+
+**`MoDL_QSM_SW_test.py`** 
+**`MoDL_QSM_SW_train.py`** 
+**`MoDL_QSM_USW_RS_ISDU_QSM_test.py`** 
+**`MoDL_QSM_USW_RS_ISDU_QSM_test_on_QSM_2016_challange_data_RC_1.py`** 
+**`MoDL_QSM_USW_RS_ISDU_QSM_train.py`** 
+**`MoDL_QSM_USW_test.py`** 
+**`MoDL_QSM_USW_train.py`** 
+
+
 
 README.md
 <h2>Dependencies</h2>
