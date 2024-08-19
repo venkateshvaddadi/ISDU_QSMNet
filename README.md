@@ -27,11 +27,8 @@ We can check the quality of the ISDU-QSMNet output by running the **`metrics_eva
 
 <h2>Directories Description</h2>
 data
-
 images
-
 qsm_modules
-
 savedModels
 
 <h2>Files Description</h2>
