@@ -59,3 +59,11 @@ We can check the quality of the ISDU-QSMNet output by running the **`metrics_eva
 
 
 
+<h2>Contact</h2>
+Dr. Phaneendra K. Yalavarthy
+
+Assoc.Prof, CDS, IISc Bangalore, email : yalavarthy@iisc.ac.in
+
+Vaddadi Venkatesh
+
+(PhD) CDS, MIG, IISc Bangalore, email : venkateshvad@iisc.ac.in
