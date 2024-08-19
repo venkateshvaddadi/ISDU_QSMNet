@@ -13,7 +13,7 @@ The following mathematical relation represents the linear approximated equation 
 For solving QSM problem, it is required peform dipole deconvolution with local field. It is very cruical step in the QSM solving. Unfortunately, this it is an illposed problem.
 <img src="images/relation between local filed and qsm.PNG" alt="spinet-QSM architecture" width=100% height=100%>
 <h2>ISDU-QSMNet Architecture</h2>
-<img src="images/ISDU_QSMNet_architetcture_3.png" alt="ISDU-QSMNet architecture" width=100% height=100%>
+<img src="images/ISDU_QSMNet.png" alt="ISDU-QSMNet architecture" width=100% height=100%>
 
 <h2>Sample QSM reconstruction on QSM-2016 challenge data</h2>  
 <img src="data/qsm_2016_recon_challenge/output/ISDU_QSMNet_output_image.png" alt="ISDU-QSMNet architecture" width=100% height=100%>
