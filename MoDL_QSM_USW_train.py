@@ -84,7 +84,7 @@ restore=True
 
 
 
-K_unrolling=3
+K_unrolling=4
 batch_size=2
 No_samples=16800
 epoch=0
@@ -98,12 +98,6 @@ MM_steps=1
 data_source='given_single_patient_data'
 Training_patient_no=1
 data_source_no=1
-if(data_source=='generated_data'):
-
-    raw_data_path='../QSM_data/data_for_experiments/generated_data/raw_data/'
-    data_path='../QSM_data/data_for_experiments/generated_data/data_source_1/'
-    #data_path='../QSM_data/data_for_experiments/generated_data/single_patient_patches/patient_'
-    #patients_list =[7,32,9,10]
 
 elif(data_source=='given_data'):
 
@@ -164,7 +158,7 @@ print("data_path:",data_path)
 # making directory for sving models
 print ('*******************************************************')
 start_time=time.time()
-experiments_folder="savedModels/Spinet_QSM_denoisers_with_unshared_weights/experiments_on_given_data/dw_WideResNet/single_patient/"
+experiments_folder="savedModels/MoDL_QSM_with_unshared_weights/experiments_on_SNU_data/dw_WideResNet/training_on_full_data/Jun_28_05_36_pm_model_K_1_given_data_dw_WideResNet_data_source_1/Spinet_QSM_model_26_.pth"
 
 experiment_name=datetime.now().strftime("%b_%d_%I_%M_%P_")+"model_K_"+ str(K_unrolling)+"_"+data_source+'_dw_'+model;
 cwd=os.getcwd()
@@ -250,16 +244,7 @@ model_dic={}
 for i in range(K_unrolling):
     dw=WideResNet().cuda(device_id)
     print('before adding into list:',id(dw))
-    restore_weights_path='savedModels/Spinet_QSM_denoisers_with_unshared_weights/experiments_on_given_data/dw_WideResNet/single_patient/without_sampling/Aug_05_05_17_pm_model_K_1_given_single_patient_data_dw_WideResNet_patient_1/Spinet_QSM_model_48_.pth'
-    # restore_weights_path='savedModels/Spinet_QSM_denoisers_with_unshared_weights/experiments_on_given_data/dw_WideResNet/single_patient/without_sampling/Aug_05_05_17_pm_model_K_1_given_single_patient_data_dw_WideResNet_patient_1/Spinet_QSM_model_36_.pth'
-    # restore_weights_path='savedModels/Spinet_QSM_denoisers_with_unshared_weights/experiments_on_given_data/dw_WideResNet/single_patient/without_sampling/Aug_05_05_17_pm_model_K_1_given_single_patient_data_dw_WideResNet_patient_1/Spinet_QSM_model_55_.pth'
-    # restore_weights_path='savedModels/Spinet_QSM_denoisers_with_unshared_weights/experiments_on_given_data/dw_WideResNet/single_patient/without_sampling/Aug_05_05_17_pm_model_K_1_given_single_patient_data_dw_WideResNet_patient_1/Spinet_QSM_model_26_.pth'
-
-    # restore_weights_path='savedModels/Spinet_QSM_MODELS_dw_QSMnet_loss_l1_lambda_p_trainging/experiments_on_given_data/dw_WideResNet/full_data_training_without_sampling/single_patient/Aug_05_05_17_pm_model_K_1_given_single_patient_data_dw_WideResNet_patient_1/Spinet_QSM_model_48_.pth'
-    # restore_weights_path='savedModels/Spinet_QSM_MODELS_dw_QSMnet_loss_l1_lambda_p_trainging/experiments_on_given_data/dw_WideResNet/full_data_training_without_sampling/single_patient/Aug_05_05_19_pm_model_K_1_given_single_patient_data_dw_WideResNet_patient_2/Spinet_QSM_model_36_.pth'
-    # restore_weights_path='savedModels/Spinet_QSM_MODELS_dw_QSMnet_loss_l1_lambda_p_trainging/experiments_on_given_data/dw_WideResNet/full_data_training_without_sampling/single_patient/Aug_05_10_20_pm_model_K_1_given_single_patient_data_dw_WideResNet_patient_3/Spinet_QSM_model_55_.pth'
-    # restore_weights_path='savedModels/Spinet_QSM_MODELS_dw_QSMnet_loss_l1_lambda_p_trainging/experiments_on_given_data/dw_WideResNet/full_data_training_without_sampling/single_patient/Aug_05_10_22_pm_model_K_1_given_single_patient_data_dw_WideResNet_patient_4/Spinet_QSM_model_26_.pth'
-
+    restore_weights_path='savedModels/MoDL_QSM_with_unshared_weights_with_random_sampling/experiments_on_SNU_data/dw_WideResNet/training_on_full_data/Jun_28_05_36_pm_model_K_1_given_data_dw_WideResNet_data_source_1/Spinet_QSM_model_26_.pth'
 
     dw.load_state_dict(torch.load(restore_weights_path))
 

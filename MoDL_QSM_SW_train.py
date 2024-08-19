@@ -85,7 +85,7 @@ restore=False
 
 
 
-K_unrolling=1
+K_unrolling=4
 batch_size=2
 No_samples=16800
 epoch=0
@@ -165,9 +165,7 @@ print("data_path:",data_path)
 # making directory for sving models
 print ('*******************************************************')
 start_time=time.time()
-experiments_folder="savedModels/Spinet_QSM_MODELS_dw_QSMnet_loss_l1_lambda_p_trainging/experiments_on_given_data/dw_WideResNet//"
-experiments_folder="savedModels/Spinet_QSM_MODELS_dw_QSMnet_loss_l1_lambda_p_trainging/experiments_on_given_data/dw_WideResNet/full_data_training_without_sampling/"
-experiments_folder="savedModels/Spinet_QSM_MODELS_dw_QSMnet_loss_l1_lambda_p_trainging/experiments_on_given_data/dw_3D_U2NetP/full_data_training_without_sampling/"
+experiments_folder="savedModels/MoDL_QSM_with_shared_weights_without_random_sampling/experiments_on_SNU_data/dw_WideResNet/training_on_full_data/"
 
 experiment_name=datetime.now().strftime("%b_%d_%I_%M_%P_")+"model_K_"+ str(K_unrolling)+"_"+data_source+'_dw_'+model;
 cwd=os.getcwd()
@@ -266,7 +264,8 @@ print("lambda_val",dw.lambda_val)
 #%%
 #%%
 if restore:
-    restore_weights_path='savedModels/Spinet_QSM_MODELS_dw_QSMnet_loss_l1_lambda_p_trainging/experiments_on_given_data/dw_WideResNet/full_data_training_without_sampling/Jun_28_11_12_pm_model_K_1_given_data_dw_WideResNet_data_source_2/Spinet_QSM_model_29_.pth'
+    # initializing the weights of K=1 experiment with K>1.
+    restore_weights_path='savedModels/MoDL_QSM_with_shared_weights_without_random_sampling/experiments_on_SNU_data/dw_WideResNet/training_on_full_data/Jun_28_05_36_pm_model_K_1_given_data_dw_WideResNet_data_source_1/model_26_.pth'
     dw.load_state_dict(torch.load(restore_weights_path))
     print("we have restored weights of the model:",restore_weights_path)
     logging.warning('restore_weights_path:'+(restore_weights_path))

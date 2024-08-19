@@ -63,7 +63,7 @@ model='WideResNet'
 
 #%%
 
-epoch=52
+epoch=48
 
 
 import argparse
@@ -79,13 +79,7 @@ data_source='given_data'
 Training_patient_no=2
 data_source_no=1
 
-if(data_source=='generated_data'):
-
-    raw_data_path='../QSM_data/data_for_experiments/generated_data/raw_data_noisy_sigma_0.05/'
-    data_path='../QSM_data/data_for_experiments/generated_data/data_source_1/'
-    patients_list =[7,32,9,10]
-
-elif(data_source=='given_data'):
+if(data_source=='given_data'):
 
     raw_data_path='../QSM_data/data_for_experiments/given_data/raw_data_names_modified/'
 
@@ -119,12 +113,6 @@ elif(data_source=='generated_noisy_data'):
     patients_list =[7,32,9,10]
 
 
-
-elif(data_source=='generated_undersampled_data'):
-    raw_data_path='../QSM_data/data_for_experiments/generated_data/sampling_data/sampled_0.05//'
-    data_path='../QSM_data/data_for_experiments/generated_data/data_source_1/'
-    patients_list =[7,32,9,10]
-
 elif(data_source=='given_single_patient_data'):
     raw_data_path='../QSM_data/data_for_experiments/given_data/raw_data_names_modified/'
     if(Training_patient_no==1):
@@ -153,12 +141,13 @@ print('csv_path',csv_path)
 print('data_path:',data_path)
 print('raw_data_path',raw_data_path)
 #%%
+# experiments_folder="savedModels/Spinet_QSM_denoisers_with_unshared_weights/experiments_on_given_data/dw_WideResNet/with_sampling/"
+experiments_folder="savedModels/MoDL_QSM_with_unshared_weights_with_random_sampling/experiments_on_SNU_data/dw_WideResNet/training_on_full_data/"
+experiment_name="Oct_11_09_36_am_model_K_4_given_data_dw_WideResNet_data_source_1_sampled_4000/"
 
-experiments_folder="savedModels/MoDL_QSM_with_unshared_weights/experiments_on_SNU_data/dw_WideResNet/training_on_full_data/"
-experiment_name="Oct_04_09_07_pm_model_K_4_given_data_dw_WideResNet_data_source_1//"
 
 
-model_name="model_"+str(epoch)+".pt"
+model_name="model_"+str(epoch)+"_.pt"
 model_path=experiments_folder+"/"+experiment_name+"/"+model_name
 print('model_path:',model_path)
 
