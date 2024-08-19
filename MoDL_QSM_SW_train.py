@@ -194,7 +194,7 @@ if(not is_data_normalized):
     print('\n\n data is not normalized..................\n\n ')
 
 else:
-    stats = scipy.io.loadmat(csv_path+'/csv_files/tr-stats.mat')
+    stats = scipy.io.loadmat('data/training_stats/tr-stats.mat')
     sus_mean= torch.tensor(stats['out_mean']).cuda(device_id)
     sus_std = torch.tensor(stats['out_std' ]).cuda(device_id)
     print(sus_mean,sus_std)
