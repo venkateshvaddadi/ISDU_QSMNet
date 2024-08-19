@@ -23,8 +23,25 @@ We can run from the command for the training the MSFF-QSMNet:
 **`python MoDL_QSM_USW_RS_ISDU_QSM_train.py --model=MSFF_QSMNet --name=demo1 --saveroot=./savedModels --lr=0.001 --batch-size=8 --epoch=50 --ngpu=2`**.
 
 
-We can check the quality of the MSFF-QSMNet output by running the **`metrics_evaluation.m`**. It calculates the **`SSIM, pSNR, RMSE, HFEN`**.
-<h2>Files Description</h2>
+We can check the quality of the ISDU-QSMNet output by running the **`metrics_evaluation.m`**. It calculates the **`SSIM, pSNR, RMSE, HFEN`**.
+
+<h2>Directories Description</h2>
+
+
+data
+images
+qsm_modules
+savedModels
+
+
+MoDL_QSM_SW_test.py
+MoDL_QSM_SW_train.py
+MoDL_QSM_USW_RS_ISDU_QSM_test.py.py
+MoDL_QSM_USW_RS_ISDU_QSM_test_on_QSM_2016_challange_data_RC_1.py
+MoDL_QSM_USW_RS_ISDU_QSM_train.py
+MoDL_QSM_USW_test.py
+MoDL_QSM_USW_train.py
+README.md
 <h2>Dependencies</h2>
 <li> Python  </li>  
 <li> PyTorch 2.10 </li>
