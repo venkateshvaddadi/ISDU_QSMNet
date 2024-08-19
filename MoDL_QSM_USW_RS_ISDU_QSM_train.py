@@ -84,7 +84,7 @@ restore=True
 
 
 
-K_unrolling=3
+K_unrolling=4
 batch_size=2
 No_samples=16800
 epoch=0
@@ -94,18 +94,14 @@ break_amount=1000
 is_data_normalized=True
 model='WideResNet'
 MM_steps=1
-#%%
 data_source='given_single_patient_data'
 Training_patient_no=1
 data_source_no=1
-if(data_source=='generated_data'):
 
-    raw_data_path='../QSM_data/data_for_experiments/generated_data/raw_data/'
-    data_path='../QSM_data/data_for_experiments/generated_data/data_source_1/'
-    #data_path='../QSM_data/data_for_experiments/generated_data/single_patient_patches/patient_'
-    #patients_list =[7,32,9,10]
+#%%
 
-elif(data_source=='given_data'):
+# choosing the data source for the 4-fold training
+if(data_source=='given_data'):
 
     raw_data_path='../QSM_data/data_for_experiments/given_data/raw_data_names_modified/'
     
@@ -128,11 +124,6 @@ elif(data_source=='given_data'):
         patients_list =[4,5,6,7,8,9]
         csv_path='../QSM_data/data_for_experiments/given_data/data_source_4//'
         data_path='../QSM_data/data_for_experiments/given_data/data_as_patches/'
-
-    
-elif(data_source=='generated_noisy_data'):
-    raw_data_path='../QSM_data/data_for_experiments/generated_data/raw_data_noisy_sigma_0.1/'
-    data_path='../QSM_data/data_for_experiments/generated_data/data_source_1_sigma_0.1/'
 
 elif(data_source=='given_single_patient_data'):
     raw_data_path='../QSM_data/data_for_experiments/given_data/raw_data_names_modified/'
@@ -164,8 +155,7 @@ print("data_path:",data_path)
 # making directory for sving models
 print ('*******************************************************')
 start_time=time.time()
-experiments_folder="savedModels/Spinet_QSM_denoisers_with_unshared_weights/experiments_on_given_data/dw_WideResNet/single_patient/"
-
+experiments_folder="savedModels/MoDL_QSM_with_unshared_weights_with_random_sampling/experiments_on_SNU_data/dw_WideResNet/training_on_full_data/Jun_28_05_36_pm_model_K_1_given_data_dw_WideResNet_data_source_1/"
 experiment_name=datetime.now().strftime("%b_%d_%I_%M_%P_")+"model_K_"+ str(K_unrolling)+"_"+data_source+'_dw_'+model;
 cwd=os.getcwd()
 
@@ -219,7 +209,6 @@ logging.warning('data_normalized:'+str(is_data_normalized))
 logging.warning('data_source:'+str(data_source))
 logging.warning('data_path:'+(data_path))
 logging.warning('csv_path:'+(csv_path))
-
 logging.warning('no traiiiining smaples'+str(len(trainloader)))
 logging.warning('no validation smaples'+str(len(valloader)))
 logging.warning('MMsteps: '+str(MM_steps))
@@ -227,7 +216,6 @@ logging.warning('MMsteps: '+str(MM_steps))
 #%%
 
 
-#%%
 dk = dipole_kernel(matrix_size, voxel_size, B0_dir=[0, 0, 1])
 dk=dk.float()
 dk = torch.unsqueeze(dk, dim=0)
@@ -250,11 +238,10 @@ model_dic={}
 for i in range(K_unrolling):
     dw=WideResNet().cuda(device_id)
     print('before adding into list:',id(dw))
-    restore_weights_path='savedModels/Spinet_QSM_denoisers_with_unshared_weights/experiments_on_given_data/dw_WideResNet/single_patient/without_sampling/Aug_05_05_17_pm_model_K_1_given_single_patient_data_dw_WideResNet_patient_1/Spinet_QSM_model_48_.pth'
+    restore_weights_path='savedModels/MoDL_QSM_with_unshared_weights_with_random_sampling/experiments_on_SNU_data/dw_WideResNet/training_on_full_data/Jun_28_05_36_pm_model_K_1_given_data_dw_WideResNet_data_source_1/Spinet_QSM_model_26_.pth'
     # restore_weights_path='savedModels/Spinet_QSM_denoisers_with_unshared_weights/experiments_on_given_data/dw_WideResNet/single_patient/without_sampling/Aug_05_05_17_pm_model_K_1_given_single_patient_data_dw_WideResNet_patient_1/Spinet_QSM_model_36_.pth'
     # restore_weights_path='savedModels/Spinet_QSM_denoisers_with_unshared_weights/experiments_on_given_data/dw_WideResNet/single_patient/without_sampling/Aug_05_05_17_pm_model_K_1_given_single_patient_data_dw_WideResNet_patient_1/Spinet_QSM_model_55_.pth'
     # restore_weights_path='savedModels/Spinet_QSM_denoisers_with_unshared_weights/experiments_on_given_data/dw_WideResNet/single_patient/without_sampling/Aug_05_05_17_pm_model_K_1_given_single_patient_data_dw_WideResNet_patient_1/Spinet_QSM_model_26_.pth'
-
     # restore_weights_path='savedModels/Spinet_QSM_MODELS_dw_QSMnet_loss_l1_lambda_p_trainging/experiments_on_given_data/dw_WideResNet/full_data_training_without_sampling/single_patient/Aug_05_05_17_pm_model_K_1_given_single_patient_data_dw_WideResNet_patient_1/Spinet_QSM_model_48_.pth'
     # restore_weights_path='savedModels/Spinet_QSM_MODELS_dw_QSMnet_loss_l1_lambda_p_trainging/experiments_on_given_data/dw_WideResNet/full_data_training_without_sampling/single_patient/Aug_05_05_19_pm_model_K_1_given_single_patient_data_dw_WideResNet_patient_2/Spinet_QSM_model_36_.pth'
     # restore_weights_path='savedModels/Spinet_QSM_MODELS_dw_QSMnet_loss_l1_lambda_p_trainging/experiments_on_given_data/dw_WideResNet/full_data_training_without_sampling/single_patient/Aug_05_10_20_pm_model_K_1_given_single_patient_data_dw_WideResNet_patient_3/Spinet_QSM_model_55_.pth'
@@ -355,7 +342,6 @@ print('break_amount:',break_amount)
 print('learning_rate:',learning_rate)
 print('device_id:',device_id)
 print('----------------------------------------------------------')
-
 print('no of training batches:',len(trainloader))
 print('----------------------------------------------------------')
 print('no of validation batches:',len(valloader))
