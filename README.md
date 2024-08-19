@@ -26,11 +26,10 @@ We can run from the command for the training the MSFF-QSMNet:
 We can check the quality of the ISDU-QSMNet output by running the **`metrics_evaluation.m`**. It calculates the **`SSIM, pSNR, RMSE, HFEN`**.
 
 <h2>Directories Description</h2>
-**data**
-**images**
-**qsm_modules**
-**savedModels**
-
+**`data:`** 
+**`images:`** 
+**`qsm_modules:`** 
+**`savedModels:`** 
 <h2>Files Description</h2>
 
 MoDL_QSM_SW_test.py
