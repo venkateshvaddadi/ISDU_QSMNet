@@ -31,8 +31,6 @@ We can train the ISDU-QSMNet with the following command:
 
 The **`MoDL_QSM_USW_RS_ISDU_QSM_test_on_QSM_2016_challange_data_RC_1.py`** file should run without any changes in the code for testing on RC-1 data. 
 
-
-We can check the quality of the ISDU-QSMNet output by running the **`metrics_evaluation.m`**. It calculates the **`SSIM, pSNR, RMSE, HFEN`**.
 </hl>
 <h2>Directories Description</h2>
 
@@ -75,7 +73,8 @@ a testing code for a model-based deep learning method using CNN denoiser-based r
 An exising trained model was using for testing on **RC-1** data.
 
 **`MoDL_QSM_USW_RS_ISDU_QSM_test_on_QSM_2016_challange_data_RC_1`**
-It is matlab script for for evaluating the results. This script using **`compute_hfen.m`**, **`compute_psnr.m`**, **`compute_rmse.m`**, **`compute_ssim.m`**, **`compute_xsim.m`** .
+It is matlab script for for evaluating the results. This script using **`compute_hfen.m`**, **`compute_psnr.m`**, **`compute_rmse.m`**, **`compute_ssim.m`**, **`compute_xsim.m`** and, it calculates the **`SSIM, pSNR, RMSE, HFEN`**.
+.
 
 <h2>Dependencies</h2>
 <li> Python  </li>  
