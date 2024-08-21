@@ -35,7 +35,9 @@ We can check the quality of the ISDU-QSMNet output by running the **`metrics_eva
 **`data:`**  
 This directory contains the input data and output results.
 
-**`qsm_modules/qsm_data_loader`** 
+**`qsm_modules/qsm_data_loader/QSM_Dataset_updated.py** 
+This is the data loader code for loading the data.
+
 **`qsm_modules/qsm_dw_models`** 
 **`qsm_modules/qsm_loss_modules`** 
 
