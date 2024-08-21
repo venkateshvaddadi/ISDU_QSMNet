@@ -34,17 +34,20 @@ We can check the quality of the ISDU-QSMNet output by running the **`metrics_eva
 
 **`data:`**  
 This directory contains the input data and output results.
+**`qsm_modules/qsm_dw_models/** 
+This directory contains the different 3D-CNN models for the denoiser. 
 
-**`qsm_modules/qsm_data_loader/QSM_Dataset_updated.py** 
-This is the data loader code for loading the data.
-
-**`qsm_modules/qsm_dw_models`** 
-**`qsm_modules/qsm_loss_modules`** 
 
 **`savedModels:`** 
 The directory containes the existing trained models.
 
 <h2>Files Description</h2>
+
+**`qsm_modules/qsm_data_loader/QSM_Dataset_updated.py** 
+This is the data loader code for loading the data.
+
+**`qsm_modules/qsm_loss_modules/loss.py`** 
+This is the loss function code which was used in training codes.
 
 **`MoDL_QSM_SW_train.py`** :
 training code for a model-based deep learning method using a CNN denoiser-based regularizer with shared weights.
