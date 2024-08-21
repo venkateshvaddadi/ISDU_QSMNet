@@ -75,7 +75,7 @@ It is matlab script for for evaluating the results. This script using **`compute
 
 <h2>Dependencies</h2>
 <li> Python  </li>  
-<li> PyTorch 2.10 </li>
+<li> PyTorch 1.10 </li>
 <li> MATLAB R2022b </li>
 
 
