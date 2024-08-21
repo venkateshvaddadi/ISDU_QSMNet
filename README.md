@@ -47,6 +47,11 @@ training code for a model-based deep learning method using a CNN denoiser-based 
 **`MoDL_QSM_SW_test.py`** 
 testing code for a model-based deep learning method using a CNN denoiser-based regularizer with shared weights.
 
+**`MoDL_QSM_USW_train.py`** 
+a training code for a model-based deep learning method using CNN denoiser-based regularizer with unshared weights (which is incorporating iteration-specific training parameters).
+
+**`MoDL_QSM_USW_test.py`** 
+a testing code for a model-based deep learning method using CNN denoiser-based regularizer with unshared weights .
 
 **`MoDL_QSM_USW_RS_ISDU_QSM_train.py`** 
 
@@ -54,9 +59,6 @@ testing code for a model-based deep learning method using a CNN denoiser-based r
 
 **`MoDL_QSM_USW_RS_ISDU_QSM_test_on_QSM_2016_challange_data_RC_1.py`** 
 
-**`MoDL_QSM_USW_train.py`** 
-
-**`MoDL_QSM_USW_test.py`** 
 
 
 
