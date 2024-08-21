@@ -18,7 +18,7 @@ For solving QSM problem, it is required peform dipole deconvolution with local f
 <h2>Sample QSM reconstruction on QSM-2016 challenge data</h2>  
 <img src="data/qsm_2016_recon_challenge/output/ISDU_QSMNet_output_image.png" alt="ISDU-QSMNet architecture" width=100% height=100%>
 <h2> How to run the code</h2>
-First, ensure that PyTorch 1.10 or higher version is installed and working with GPU. Second, just clone or download this reporsitory. The SpiNet_QSM_demo_run.py file should run without any changes in the code. 
+First, ensure that PyTorch 1.10 or higher version is installed and working with GPU. Second, just clone or download this reporsitory. The MoDL_QSM_USW_RS_ISDU_QSM_test_on_QSM_2016_challange_data_RC_1.py file should run without any changes in the code. 
 
 We can run from the command for the training the MSFF-QSMNet: 
 
