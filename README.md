@@ -20,7 +20,7 @@ For solving QSM problem, it is required peform dipole deconvolution with local f
 <h2> How to run the code</h2>
 First, ensure that PyTorch 1.10 or higher version is installed and working with GPU. Second, just clone or download this reporsitory. 
 
-The MoDL_QSM_USW_RS_ISDU_QSM_test_on_QSM_2016_challange_data_RC_1.py file should run without any changes in the code for testing on RC-1 data. 
+The **`MoDL_QSM_USW_RS_ISDU_QSM_test_on_QSM_2016_challange_data_RC_1.py`** file should run without any changes in the code for testing on RC-1 data. 
 
 We can train the ISDU-QSMNet with the following command: 
 
