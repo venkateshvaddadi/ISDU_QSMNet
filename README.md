@@ -14,9 +14,9 @@ For solving QSM problem, it is required peform dipole deconvolution with local f
 <img src="images/relation between local filed and qsm.PNG" alt="spinet-QSM architecture" width=100% height=100%>
 <h2>ISDU-QSMNet Architecture</h2>
 <img src="images/ISDU_QSMNet.png" alt="ISDU-QSMNet architecture" width=100% height=100%>
+<img src="images/ISDU_QSMNet.png" alt="ISDU-QSMNet architecture" width=100% height=100%>
 
 <h2>Sample QSM reconstruction on QSM-2016 challenge data</h2>  
-<img src="data/qsm_2016_recon_challenge/output/ISDU_QSMNet_output_image.png" alt="ISDU-QSMNet architecture" width=100% height=100%>
 <img src="data/qsm_2016_recon_challenge/output/ISDU_QSMNet_output_image.png" alt="ISDU-QSMNet architecture" width=100% height=100%>
 <h2> How to run the code</h2>
 First, ensure that PyTorch 1.10 or higher version is installed and working with GPU. Second, just clone or download this reporsitory. 
