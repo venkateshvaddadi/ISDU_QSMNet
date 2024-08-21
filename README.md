@@ -32,13 +32,16 @@ We can check the quality of the ISDU-QSMNet output by running the **`metrics_eva
 
 <h2>Directories Description</h2>
 
-**`data:`** 
-
-**`images:`** 
+**`data:`**  
+This directory contains the input data and output results.
 
 **`qsm_modules:`** 
-
+**`qsm_modules/qsm_data_loader`** 
+**`qsm_modules/qsm_dw_models`** 
+**`qsm_modules/qsm_loss_modules`** 
 **`savedModels:`** 
+The directory containes the existing trained models.
+
 <h2>Files Description</h2>
 
 **`MoDL_QSM_SW_train.py`** :
