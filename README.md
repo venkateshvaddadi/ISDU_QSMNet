@@ -41,9 +41,12 @@ We can check the quality of the ISDU-QSMNet output by running the **`metrics_eva
 **`savedModels:`** 
 <h2>Files Description</h2>
 
-**`MoDL_QSM_SW_train.py`** 
+**`MoDL_QSM_SW_train.py`** :
+training code for a model-based deep learning method using a CNN denoiser-based regularizer with shared weights.
 
 **`MoDL_QSM_SW_test.py`** 
+testing code for a model-based deep learning method using a CNN denoiser-based regularizer with shared weights.
+
 
 **`MoDL_QSM_USW_RS_ISDU_QSM_train.py`** 
 
