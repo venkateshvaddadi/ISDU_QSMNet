@@ -43,7 +43,7 @@ The directory containes the existing trained models.
 
 <h2>Files Description</h2>
 
-**`qsm_modules/qsm_data_loader/QSM_Dataset_updated.py** 
+**`qsm_modules/qsm_data_loader/QSM_Dataset_updated.py`** 
 This is the data loader code for loading the data.
 
 **`qsm_modules/qsm_loss_modules/loss.py`** 
