@@ -72,7 +72,7 @@ a testing code for a model-based deep learning method using CNN denoiser-based r
 **`MoDL_QSM_USW_RS_ISDU_QSM_test_on_QSM_2016_challange_data_RC_1.py`** 
 An exising trained model was using for testing on **RC-1** data.
 
-**`MoDL_QSM_USW_RS_ISDU_QSM_test_on_QSM_2016_challange_data_RC_1`**
+**`MoDL_QSM_USW_RS_ISDU_QSM_test_on_QSM_2016_challange_data_RC_1.mat`**
 It is matlab script for for evaluating the results. This script using **`compute_ssim.m`**, **`compute_xsim.m`**, **`compute_psnr.m`**, **`compute_rmse.m`**, **`compute_hfen.m`**,  and, it calculates the **`SSIM, xSIM, pSNR, RMSE, HFEN`**.
 .
 
