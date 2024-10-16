@@ -86,7 +86,7 @@ It is matlab script for for evaluating the results. This script using **`compute
 <h2>Contact</h2>
 Dr. Phaneendra K. Yalavarthy
 
-Assoc.Prof, CDS, IISc Bangalore, email : yalavarthy@iisc.ac.in
+Prof, CDS, IISc Bangalore, email : yalavarthy@iisc.ac.in
 
 Vaddadi Venkatesh
 
