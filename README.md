@@ -17,7 +17,7 @@ For solving QSM problem, it is required peform dipole deconvolution with local f
 
 <h2>Testing in ISDU-QSMNet (Iterative improvement):</h2>
 
-<img src="images/ISDU_QSMNet.png" alt="ISDU-QSMNet architecture" width=100% height=100%>
+<img src="images/ISDU_QSM_iterative_refinement.png" alt="ISDU-QSMNet architecture" width=100% height=100%>
 
 <h2>Sample QSM reconstruction on QSM-2016 challenge data</h2>  
 <img src="data/qsm_2016_recon_challenge/output/ISDU_QSMNet_output_image.png" alt="ISDU-QSMNet architecture" width=80% height=80%>
