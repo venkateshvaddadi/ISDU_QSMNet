@@ -2,7 +2,9 @@
 <head>
 </head>
 <body>
-<h1> ISDU-QSMNet: Iteration Specfic Denoiser via Unshared Weights </h1>
+<h1> ISDU-QSMNet: Iteration Specific Denoising with Unshared Weights for Improved QSM Reconstruction </h1>
+
+  
 <h2> QSM problem</h2>
 QSM provides information about the underlying magnetic susceptibility distribution of a sample from MRI phase measurements. It is useful in the clinical diagnosis of diseases  like Demyelination, Calcification, and Parkinson’s disease.
   
