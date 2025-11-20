@@ -4,6 +4,9 @@
 <body>
 <h1> ISDU-QSMNet: Iteration Specific Denoising with Unshared Weights for Improved QSM Reconstruction </h1>
 
+Vaddadi, Venkatesh, Raji Susan Mathew, and Phaneendra K. Yalavarthy. "ISDU‐QSMNet: Iteration Specific Denoising With Unshared Weights for Improved QSM Reconstruction." NMR in Biomedicine 38.11 (2025): e70152.
+<a href="https://cds.iisc.ac.in/faculty/yalavarthy/Vadaddi_NMRBiomed_2025.pdf">[manuscript]</a>
+
   
 <h2> QSM problem</h2>
 QSM provides information about the underlying magnetic susceptibility distribution of a sample from MRI phase measurements. It is useful in the clinical diagnosis of diseases  like Demyelination, Calcification, and Parkinson’s disease.
